@@ -7,8 +7,8 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 
 const IndexPage = () => (
-  <div style={{ background: "pink", margin: 0 }}>
-    <Header siteTitle="Andrew Bamidele" />
+  <div style={{ margin: 0 }}>
+    <Header siteTitle="Drew" />
     <HomeSummary />
     <Seo title="Home" />
     {/* <h1>Hi people</h1>

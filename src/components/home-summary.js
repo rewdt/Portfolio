@@ -6,13 +6,14 @@ import Typed from "typed.js"
 const useStyles = makeStyles(theme => ({
   root: {
     background: "#E8E8E2",
-    height: "calc(100vh - 100px)",
+    height: "100vh",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     // alignItems: "center",
     padding: theme.spacing(2, 5),
     [theme.breakpoints.down("md")]: {
+      // height: "calc(100vh - 200px)",
       padding: theme.spacing(2, 3),
     },
   },
@@ -41,6 +42,7 @@ function HomeSummary() {
       strings: [
         "A Fullstack developer",
         "I automate the web",
+        "I build mobile aaplications",
         "I implement pixel perfect UI's",
       ],
       loop: true,
@@ -58,7 +60,7 @@ function HomeSummary() {
   return (
     <div className={classes.root}>
       <div className={classes.content}>
-        <Typography variant="body2">Hi, my name is</Typography>
+        <Typography variant="body1">Hi, my name is</Typography>
         <Typography
           variant="h2"
           className={classes.titleText}
@@ -79,13 +81,14 @@ function HomeSummary() {
           }}
           ref={el}
         />
-        <Typography variant="body2">
+        <Typography variant="body1">
           I am a fullstack software engineer with a passion for building,
           testing and scaling applications. My work cuts across various
           platforms such as android, ios and the web. By leveraging frameworks
-          such as react, react native and nodejs I love startups and I am always
+          such as react, react native and nodejs
+          {/* I love startups and I am always
           excited to work on varying projects to ensure a sustainable growth
-          within my locality and by extension the world at large
+          within my locality and by extension the world at large */}
         </Typography>
       </div>
     </div>
