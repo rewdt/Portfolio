@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Andrew Bamidele`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
@@ -29,6 +29,31 @@ module.exports = {
         // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Poppins`,
+                variants: [
+                  `100`,
+                  `200`,
+                  `300`,
+                  `400`,
+                  `500`,
+                  `600`,
+                  `700`,
+                  `800`,
+                  `900`,
+                ],
+              },
+            ],
+          },
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

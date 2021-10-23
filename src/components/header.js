@@ -1,42 +1,25 @@
 import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import AppBar from "@mui/material/AppBar"
+import Toolbar from "@mui/material/Toolbar"
+import Button from "@mui/material/Button"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+export default function Header({ siteTitle }) {
+  return (
+    <AppBar position="relative" elevation={0} style={{ background: "#E8E8E2" }}>
+      <Toolbar>
+        <div style={{ display: "flex", flexGrow: 1, alignItems: "center" }}>
+          <Button
+            color="secondary"
+            sx={{
+              fontWeight: 700,
+              textTransform: "none",
+            }}
+          >
+            {siteTitle}
+          </Button>
+        </div>
+        <Button color="secondary">Login</Button>
+      </Toolbar>
+    </AppBar>
+  )
 }
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
