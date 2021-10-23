@@ -53,14 +53,15 @@ function Footer() {
             <Mail />
           </IconButton>
           <IconButton
-            href="mailto:andrewbamidele2@gmail.com"
+            href="https://www.linkedin.com/in/andrew-bamidele-6b2a5a114/"
+            target="_blank"
             color="primary"
             sx={{ p: 0, mr: 4 }}
           >
             <LinkedIn />
           </IconButton>
           <IconButton
-            href="mailto:andrewbamidele2@gmail.com"
+            href="https://twitter.com/_manlikedrew"
             color="primary"
             sx={{ p: 0 }}
           >

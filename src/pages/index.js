@@ -1,16 +1,18 @@
 import * as React from "react"
 // import { Link } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
-import Seo from "../components/seo"
+// import Seo from "../components/seo"
 import HomeSummary from "../components/home-summary"
 import Header from "../components/header"
 import Footer from "../components/footer"
+import Works from "../components/works"
 
 const IndexPage = () => (
-  <div style={{ margin: 0 }}>
+  <React.Fragment>
     <Header siteTitle="Drew" />
     <HomeSummary />
-    <Seo title="Home" />
+    <Works />
+    {/* <Seo title="Home" /> */}
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
     <p>Now go build something great.</p>
@@ -29,7 +31,7 @@ const IndexPage = () => (
       <Link to="/using-dsg">Go to "Using DSG"</Link>
     </p> */}
     <Footer />
-  </div>
+  </React.Fragment>
 )
 
 export default IndexPage
