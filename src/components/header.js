@@ -42,8 +42,8 @@ export default function Header({ siteTitle, ...props }) {
                 {siteTitle}
               </Button>
             </div>
-            <AnchorLink to="#works" title="Our team">
-              Works
+            <AnchorLink to="/#projects" title="Our team">
+              Projects
             </AnchorLink>
           </Toolbar>
         </AppBar>

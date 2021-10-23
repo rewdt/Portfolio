@@ -6,11 +6,13 @@ import HomeSummary from "../components/home-summary"
 import Header from "../components/header"
 import Footer from "../components/footer"
 import Works from "../components/works"
+import About from "../components/about"
 
 const IndexPage = () => (
   <React.Fragment>
     <Header siteTitle="Drew" />
     <HomeSummary />
+    <About />
     <Works />
     {/* <Seo title="Home" /> */}
     {/* <h1>Hi people</h1>

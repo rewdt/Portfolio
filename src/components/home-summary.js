@@ -48,6 +48,17 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     height: "100%",
     padding: theme.spacing(0, 2),
+    [theme.breakpoints.down("md")]: {
+      alignItems: "center",
+      height: "auto",
+    },
+  },
+  avatar: {
+    height: "100%",
+    [theme.breakpoints.down("md")]: {
+      height: 250,
+      width: 350,
+    },
   },
 }))
 
@@ -113,10 +124,8 @@ function HomeSummary() {
             src="../images/andrew-portfolio-img.png"
             quality={95}
             // formats={["auto", "webp", "avif"]}
-            alt="A Gatsby astronaut"
-            style={{
-              height: "100%",
-            }}
+            alt="Home Avatar"
+            className={classes.avatar}
           />
         </Grid>
       </Grid>

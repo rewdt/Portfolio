@@ -1,6 +1,7 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material"
 import { makeStyles } from "@mui/styles"
 import React from "react"
+import { Link } from "gatsby-theme-material-ui"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,20 +24,29 @@ const useStyles = makeStyles(theme => ({
       height: 150,
     },
   },
+  cardLink: {
+    fontSize: 12,
+    fontFamily: "Poppins",
+    textDecorationLine: "none",
+    "&:hover": {
+      textDecorationLine: "underline",
+    },
+  },
 }))
 
 function Works() {
   const classes = useStyles()
   return (
-    <div className={classes.root} id="works">
+    <div className={classes.root} id="projects">
       <Typography
-        variant="h4"
+        variant="h5"
         sx={{
           ml: 3,
-          mb: 5,
+          mb: 3,
+          fontWeight: 600,
         }}
       >
-        Works
+        Projects
       </Typography>
       <div style={{ overflow: "auto", whiteSpace: "nowrap" }}>
         {[0, 1, 2, 4, 5].map((el, i) => (
@@ -64,8 +74,17 @@ function Works() {
                 display: "block",
               }}
             >
-              <Typography variant="subtitle1">Project Title {i}</Typography>
-              <Typography variant="subtitle1">Fullstack Developer</Typography>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>
+                Project Title {i}
+              </Typography>
+              <Typography
+                variant="body2"
+                sx={{
+                  mb: 1,
+                }}
+              >
+                Fullstack Developer
+              </Typography>
               <Typography
                 variant="caption"
                 component="p"
@@ -75,7 +94,7 @@ function Works() {
                   WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                   display: "-webkit-box",
-                  fontSize: 13,
+                  // fontSize: 13,
                 }}
               >
                 Cupidatat minim sit Lorem veniam. Pariatur eiusmod cupidatat
@@ -84,6 +103,9 @@ function Works() {
                 pariatur nostrud commodo est laboris culpa Lorem reprehenderit
                 occaecat. Ad incididunt ea consequat eu duis aute.
               </Typography>
+              <Link to="/blog" color="secondary" className={classes.cardLink}>
+                Read more
+              </Link>
             </CardContent>
           </Card>
         ))}
