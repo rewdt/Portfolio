@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     padding: theme.spacing(0, 5),
     [theme.breakpoints.down("md")]: {
-      padding: theme.spacing(5, 2),
+      padding: `${theme.spacing(5, 4)} !important`,
     },
   },
   grid2: {

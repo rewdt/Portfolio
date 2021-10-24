@@ -47,7 +47,7 @@ export default function Header({ siteTitle, ...props }) {
     <React.Fragment>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar position="fixed">
+        <AppBar>
           <Toolbar>
             <div style={{ display: "flex", flexGrow: 1, alignItems: "center" }}>
               <Button
@@ -67,6 +67,19 @@ export default function Header({ siteTitle, ...props }) {
             <NavLink trigger={trigger} to="/#about" title="About">
               About
             </NavLink>
+            <Button
+              variant="outlined"
+              href="/"
+              color={trigger ? "primary" : "secondary"}
+              sx={{
+                textTransform: "none",
+                fontWeight: 500,
+                fontSize: 13,
+                ml: 3,
+              }}
+            >
+              Resume
+            </Button>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
