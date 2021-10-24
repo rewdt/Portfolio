@@ -5,11 +5,7 @@ import { Link } from "gatsby-theme-material-ui"
 
 const useStyles = makeStyles(theme => ({
   root: {
-    // background: "#E8E8E2",
     padding: theme.spacing(5, 0),
-    // [theme.breakpoints.down("md")]: {
-    //   padding: theme.spacing(2, 3),
-    // },
   },
   card: {
     display: "inline-block",
@@ -32,6 +28,7 @@ const useStyles = makeStyles(theme => ({
       textDecorationLine: "underline",
     },
   },
+  cardSection: { overflow: "auto", whiteSpace: "nowrap" },
 }))
 
 function Projects() {
@@ -48,7 +45,7 @@ function Projects() {
       >
         Projects
       </Typography>
-      <div style={{ overflow: "auto", whiteSpace: "nowrap" }}>
+      <div className={classes.cardSection}>
         {[0, 1, 2, 4, 5].map((el, i) => (
           <Card
             key={el.toString()}

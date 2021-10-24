@@ -3,18 +3,18 @@ import * as React from "react"
 import HomeSummary from "../components/home-summary"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import Projects from "../components/Projects"
-// import About from "../components/about"
+import Projects from "../components/projects"
+import About from "../components/about"
 
 const IndexPage = () => (
-  <React.Fragment>
+  <div>
     <Header siteTitle="Drew" />
     <HomeSummary />
-    {/* <About /> */}
+    <About />
     <Projects />
     {/* <Seo title="Home" /> */}
     <Footer />
-  </React.Fragment>
+  </div>
 )
 
 export default IndexPage
