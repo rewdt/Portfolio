@@ -46,7 +46,7 @@ export default function About() {
   }
 
   return (
-    <Box sx={{ width: "100%", px: 3 }}>
+    <Box sx={{ width: "100%", px: 3 }} id="about">
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}

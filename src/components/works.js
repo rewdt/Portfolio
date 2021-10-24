@@ -51,6 +51,7 @@ function Works() {
       <div style={{ overflow: "auto", whiteSpace: "nowrap" }}>
         {[0, 1, 2, 4, 5].map((el, i) => (
           <Card
+            key={el.toString()}
             color="secondary"
             elevation={0}
             className={classes.card}

@@ -5,6 +5,18 @@ import Button from "@mui/material/Button"
 import PropTypes from "prop-types"
 import { useScrollTrigger, CssBaseline } from "@mui/material"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import { styled } from "@mui/styles"
+
+const NavLink = styled(AnchorLink)(({ theme }) => ({
+  color: theme.palette.secondary.main,
+  textDecorationLine: "none",
+  fontFamily: "Poppins",
+  fontSize: 13,
+  marginRight: 10,
+  "&:hover": {
+    textDecorationLine: "underline",
+  },
+}))
 
 function HideOnScroll(props) {
   const { children, window } = props
@@ -42,9 +54,12 @@ export default function Header({ siteTitle, ...props }) {
                 {siteTitle}
               </Button>
             </div>
-            <AnchorLink to="/#projects" title="Our team">
+            <NavLink to="/#projects" title="Projects">
               Projects
-            </AnchorLink>
+            </NavLink>
+            <NavLink to="/#about" title="About">
+              About
+            </NavLink>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
