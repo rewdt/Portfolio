@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-function Works() {
+function Projects() {
   const classes = useStyles()
   return (
     <div className={classes.root} id="projects">
@@ -115,4 +115,4 @@ function Works() {
   )
 }
 
-export default Works
+export default Projects
