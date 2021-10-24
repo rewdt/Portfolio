@@ -23,9 +23,9 @@ const FooterDescText = styled(Typography)(({ theme }) => ({
 function Footer() {
   return (
     <Root>
-      <Typography variant="h4" sx={{ mb: 2, fontWeight: 700 }}>
+      {/* <Typography variant="h4" sx={{ mb: 2, fontWeight: 700 }}>
         Contact Me
-      </Typography>
+      </Typography> */}
       <FooterDescText color="primary" variant="body1">
         Have an idea you would like me to jump on? or just want to say hi!
         contact me to find out how I can help you. If it’s easier, you can email

@@ -7,12 +7,13 @@ import { useScrollTrigger, CssBaseline } from "@mui/material"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 import { styled } from "@mui/material/styles"
 
-const NavLink = styled(AnchorLink)(({ theme }) => ({
-  color: theme.palette.secondary.main,
+const NavLink = styled(AnchorLink)(({ theme, trigger }) => ({
+  color: trigger ? theme.palette.primary.main : theme.palette.secondary.main,
   textDecorationLine: "none",
   fontFamily: "Poppins",
+  fontWeight: 500,
   fontSize: 13,
-  marginRight: 10,
+  marginLeft: theme.spacing(3),
   "&:hover": {
     textDecorationLine: "underline",
   },
@@ -28,6 +29,7 @@ function HideOnScroll(props) {
 
   return React.cloneElement(children, {
     elevation: trigger ? 4 : 0,
+    color: trigger ? "secondary" : "primary",
   })
 }
 
@@ -36,6 +38,11 @@ HideOnScroll.propTypes = {
 }
 
 export default function Header({ siteTitle, ...props }) {
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+    target: props.window ? window() : undefined,
+  })
   return (
     <React.Fragment>
       <CssBaseline />
@@ -45,7 +52,7 @@ export default function Header({ siteTitle, ...props }) {
             <div style={{ display: "flex", flexGrow: 1, alignItems: "center" }}>
               <Button
                 href="/"
-                color="secondary"
+                color={trigger ? "primary" : "secondary"}
                 sx={{
                   fontWeight: 700,
                   textTransform: "none",
@@ -54,10 +61,10 @@ export default function Header({ siteTitle, ...props }) {
                 {siteTitle}
               </Button>
             </div>
-            <NavLink to="/#projects" title="Projects">
+            <NavLink trigger={trigger} to="/#projects" title="Projects">
               Projects
             </NavLink>
-            <NavLink to="/#about" title="About">
+            <NavLink trigger={trigger} to="/#about" title="About">
               About
             </NavLink>
           </Toolbar>
