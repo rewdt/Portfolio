@@ -8,7 +8,7 @@ import About from "../components/about"
 
 const IndexPage = () => (
   <div>
-    <Header siteTitle="Drew" />
+    <Header siteTitle="Tobi" />
     <HomeSummary />
     <About />
     <Projects />

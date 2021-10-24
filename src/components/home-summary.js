@@ -106,7 +106,7 @@ function HomeSummary() {
             className={classes.titleText}
             style={{ fontWeight: 700 }}
           >
-            Oluwatobi Bamidele
+            Tobi Bamidele
           </Typography>
           <Typography variant="h4" className={classes.gradientText} ref={el} />
           <Typography variant="body1">
