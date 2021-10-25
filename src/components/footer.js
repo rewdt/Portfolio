@@ -9,7 +9,7 @@ const Root = styled("div")(({ theme }) => ({
   marginBottom: 0,
   color: "#ffffff",
   [theme.breakpoints.down("md")]: {
-    padding: theme.spacing(10, 3),
+    padding: theme.spacing(5, 3),
   },
 }))
 
@@ -30,7 +30,10 @@ function Footer() {
         Have an idea you would like me to jump on? or just want to say hi!
         contact me to find out how I can help you. If it’s easier, you can email
         directly at &nbsp;
-        <a href="mailto:andrewbamidele2@gmail.com" style={{ color: "inherit" }}>
+        <a
+          href="mailto:andrewbamidele2@gmail.com"
+          style={{ color: "inherit", wordBreak: "break-all" }}
+        >
           andrewbamidele2@gmail.com
         </a>
       </FooterDescText>

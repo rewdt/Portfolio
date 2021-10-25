@@ -3,6 +3,7 @@ import { makeStyles } from "@mui/styles"
 import { StaticImage } from "gatsby-plugin-image"
 import React from "react"
 import Typed from "typed.js"
+import useSiteMetadata from "../hooks/use-site-metadata"
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -68,6 +69,7 @@ function HomeSummary() {
   const el = React.useRef(null)
   // Create reference to store the Typed instance itself
   const typed = React.useRef(null)
+  const { title } = useSiteMetadata()
 
   React.useEffect(() => {
     const options = {
@@ -106,7 +108,7 @@ function HomeSummary() {
             className={classes.titleText}
             style={{ fontWeight: 700 }}
           >
-            Tobi Bamidele
+            {title}
           </Typography>
           <Typography variant="h4" className={classes.gradientText} ref={el} />
           <Typography variant="body1">

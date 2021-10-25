@@ -4,7 +4,7 @@ import Tabs from "@mui/material/Tabs"
 import Tab from "@mui/material/Tab"
 import Typography from "@mui/material/Typography"
 import Box from "@mui/material/Box"
-import { useStaticQuery } from "gatsby"
+import useSiteMetadata from "../hooks/use-site-metadata"
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props
@@ -42,15 +42,7 @@ function a11yProps(index) {
 export default function About() {
   const [value, setValue] = React.useState(0)
 
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          brandName
-        }
-      }
-    }
-  `)
+  const { title } = useSiteMetadata()
 
   const handleChange = (event, newValue) => {
     setValue(newValue)
@@ -71,12 +63,12 @@ export default function About() {
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        Hello! My name is {data.site.siteMetadata?.title || `Title`} and I enjoy
-        creating software solutions with the goal of improving lives of people
-        within my locality and the world at large. As a software engineer, I am
-        intrigued by startups and have worked with teams and as a freelancer to
-        build projects that cut across different stacks while leveraging tools
-        such as reactjs, nodejs and react native.
+        Hello! My name is {title || `Title`} and I enjoy creating software
+        solutions with the goal of improving lives of people within my locality
+        and the world at large. As a software engineer, I am intrigued by
+        startups and have worked with teams and as a freelancer to build
+        projects that cut across different stacks while leveraging tools such as
+        reactjs, nodejs and react native.
         <br />
         <br />
         I'm always looking to collaborate and improve my working knowledge as
